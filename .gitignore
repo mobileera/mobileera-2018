@@ -1,6 +1,10 @@
-bower_components
-dist
-node_modules
+bower_components/
+dist/
+node_modules/
+build/
+functions/lib/
 .idea/
 .temp/
-.DS_Store
+.vscode/
+.firebaserc
+/appengine/dist/

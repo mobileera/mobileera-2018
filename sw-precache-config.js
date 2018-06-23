@@ -3,7 +3,7 @@ module.exports = {
     '/index.html',
     '/manifest.json',
     '/bower_components/webcomponentsjs/*.js',
-    '/images/**/*',
+    '/images/*',
     '/scripts/**/*',
     '/data/**/*',
     '/src/**/*',

@@ -160,7 +160,7 @@ function deploy() {
   for (let file of config.templateData) {
     metadata = Object.assign({}, metadata, require(path.join(process.cwd(), file)));
   }
-  return run(`sudo firebase use ${metadata.firebase.projectId} && sudo firebase deploy`).exec();
+  return run(`sudo env "PATH=$PATH" firebase use ${metadata.firebase.projectId} && sudo env "PATH=$PATH" firebase deploy`).exec();
 }
 
 function waitFor(stream) {

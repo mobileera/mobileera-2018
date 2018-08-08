@@ -99,6 +99,11 @@
         "description": "How it all started",
         "label": "Sweet memories from 2016",
         "youtubeId": "jN8pxsMPs-Y"
+      },
+      "joinOurSlack": {
+        "description": "We want the crew, speakers, attendees to socialize!",
+        "label": "Join our Slack team",
+        "link": "http://bit.ly/mobileera-slack"
       }
     },
     "statisticsBlock": {

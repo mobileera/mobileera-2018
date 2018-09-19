@@ -21,6 +21,7 @@ const run = require('gulp-run');
 const HtmlSplitter = polymerBuild.HtmlSplitter;
 const PolymerProject = polymerBuild.PolymerProject;
 const uglify = composer(uglifyes, console);
+const rename = require('gulp-rename');
 
 const config = {
   polymerJsonPath: './polymer.json',
@@ -130,12 +131,9 @@ function build() {
         return waitFor(normalizeStream);
       })
       .then(() => {
-        return gulp.src(prependPath(
-          config.build.rootDirectory,
-          'service-worker.js'
-        ))
-          .pipe(uglify())
-          .pipe(gulp.dest(config.build.rootDirectory));
+        return gulp.src('service-worker-kill-switch.js')
+        .pipe(rename({ basename: 'service-worker'}))
+        .pipe(gulp.dest(config.build.rootDirectory));
       })
       .then(() => {
         console.log('Build complete!');

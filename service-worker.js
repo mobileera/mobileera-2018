@@ -1,10 +1,34 @@
-/**
- * @license
- * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
-console.info('Service worker disabled for development, will be generated at build time.');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js')
+
+// SETTINGS
+
+// Verbose logging even for the production
+workbox.setConfig({ debug: true })
+workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug)
+
+// Modify SW update cycle
+workbox.skipWaiting()
+workbox.clientsClaim()
+
+// PRECACHING
+
+// Setting channel name for broadcast updates
+workbox.precaching.addPlugins([
+    new workbox.broadcastUpdate.Plugin(
+      'workbox-update',
+      {
+        headersToCheck: ['content-length', 'last-modified', 'etag']
+      }
+    )
+]);
+
+// We inject manifest here using "workbox-build" in workbox-build-inject.js
+workbox.precaching.precacheAndRoute([])
+
+// GOOGLE ANALYTICS
+
+workbox.googleAnalytics.initialize({
+  parameterOverrides: {
+    dimension1: 'offline'
+  }
+})

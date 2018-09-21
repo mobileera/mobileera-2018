@@ -5,8 +5,8 @@
   "scripts": {
     "gulp": "gulp",
     "bower": "bower",
-    "build": "gulp",
-    "build:prod": "cross-env BUILD_ENV=production gulp",
+    "build": "gulp && npm run workbox-build-inject",
+    "build:prod": "cross-env BUILD_ENV=production gulp && npm run workbox-build-inject",
     "predeploy": "cd ./functions && npm i",
     "deploy": "gulp deploy",
     "deploy:prod": "cross-env BUILD_ENV=production gulp deploy",
@@ -15,11 +15,13 @@
     "serve:prod": "cross-env BUILD_ENV=production gulp serve",
     "lint": "gulp lint",
     "pretest": "npm run lint",
-    "test": "echo \"No tests\""
+    "test": "echo \"No tests\"",
+    "workbox-build-inject": "node workbox-build-inject.js"
   },
   "dependencies": {
     "autotrack": "^2.4.1",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "workbox-build": "^3.6.1"
   },
   "devDependencies": {
     "bower": "^1.8.2",

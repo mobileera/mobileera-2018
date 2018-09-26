@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../elements/polymer-helmet.html">
+<link rel="import" href="../elements/hero-block.html">
+<link rel="import" href="../elements/footer-block.html">
+<link rel="import" href="../elements/md-content.html">
+
+<dom-module id="workshops-page">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <polymer-helmet
+      title="{$ heroSettings.workshops.title $} | {$ title $}"
+      description="{$ heroSettings.workshops.metaDescription $}"
+      active="[[active]]"
+    ></polymer-helmet>
+
+    <hero-block
+      background-image="{$ heroSettings.workshops.background.image $}"
+      background-color="{$ heroSettings.workshops.background.color $}"
+      font-color="{$ heroSettings.workshops.fontColor $}"
+      active="[[active]]"
+    >
+      <div class="hero-title highlight-font">{$ heroSettings.workshops.title $}</div>
+      <p class="hero-description">{$ heroSettings.workshops.description $}</p>
+    </hero-block>
+
+    <md-content md-source="[[source]]"></md-content>
+
+    <footer-block></footer-block>
+  </template>
+
+  <script>
+
+    // eslint-disable-next-line no-undef
+    class WorkshopsPage extends Polymer.Element {
+      static get is() {
+        return 'workshops-page';
+      }
+
+      static get properties() {
+        return {
+          active: Boolean,
+          source: {
+            type: String,
+            value: '{$ workshops $}',
+          },
+        };
+      }
+    }
+
+    window.customElements.define(WorkshopsPage.is, WorkshopsPage);
+  </script>
+</dom-module>

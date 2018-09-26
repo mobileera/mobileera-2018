@@ -38,9 +38,9 @@
       "title": "Team"
     },
     {
-      "route": "blog",
-      "permalink": "/blog/",
-      "title": "Blog"
+      "route": "workshops",
+      "permalink": "/workshops/",
+      "title": "Workshops"
     }
   ],
   "heroSettings": {
@@ -99,6 +99,14 @@
     "faq": {
       "title": "FAQs",
       "metaDescription": "Find you answer right here!",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "workshops": {
+      "title": "Workshops",
+      "metaDescription": "Two full-day workshops the day before the conference",
       "background": {
         "color": "#fff"
       },

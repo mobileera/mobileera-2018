@@ -49,4 +49,4 @@ We expect all community participants to abide by this Code of Conduct in all com
 
 # 7. Contact info
 
-- Mobile Era Conference team, [contact@mobileera.rocks](contact@mobileera.rocks)
+- Mobile Era Conference team, [contact@mobileera.rocks](mailto:contact@mobileera.rocks)

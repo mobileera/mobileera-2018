@@ -86,6 +86,40 @@
             </paper-button>
           </a>
 
+          <p>{$ aboutBlock.callToAction.mobileApps.description $}</p>
+
+          <a
+            href="{$ aboutBlock.callToAction.mobileApps.android.link $}"
+            ga-on="click"
+            ga-event-category="video"
+            ga-event-action="watch"
+            ga-event-label="about block - {$ aboutBlock.callToAction.mobileApps.android.label $}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <paper-button class="animated icon-right">
+              <span class="cta-label">{$ aboutBlock.callToAction.mobileApps.android.label $}</span>
+              <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>
+            </paper-button>
+          </a>
+
+          <a
+            href="{$ aboutBlock.callToAction.mobileApps.ios.link $}"
+            ga-on="click"
+            ga-event-category="video"
+            ga-event-action="watch"
+            ga-event-label="about block - {$ aboutBlock.callToAction.mobileApps.ios.label $}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <paper-button class="animated icon-right">
+              <span class="cta-label">{$ aboutBlock.callToAction.mobileApps.ios.label $}</span>
+              <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>
+            </paper-button>
+          </a>
+
+
+
           <p>{$ aboutBlock.callToAction.joinOurSlack.description $}</p>
           <a
             href="{$ aboutBlock.callToAction.joinOurSlack.link $}"

@@ -93,8 +93,19 @@
     "callToAction": {
       "featuredSessions": {
         "description": "Mobile Era is a conference about mobile development. Our topics: iOS / Android, Mobile web / PWA, Cross-platform / JS-to-Native, IoT / Hardware, Mobile UX / Accessibility",
-        "label": "Explore the sessions from Mobile Era 2017",
-        "link": "https://vimeo.com/album/5030425"
+        "label": "Explore this year's program",
+        "link": "/schedule/"
+      },
+      "mobileApps": {
+        "description": "Check our official mobile apps:",
+        "android": {
+          "label": "Mobile Era 2018 app on Apple AppStore",
+          "link": "https://itunes.apple.com/us/app/mobile-era-2018/id1438958449"
+        },
+        "ios": {
+          "label": "Mobile Era 2018 app on Google Play",
+          "link": "https://play.google.com/store/apps/details?id=rocks.mobileera.mobileera"
+        }
       },
       "howItWas": {
         "description": "How it all started",
